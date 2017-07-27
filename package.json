@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-glifile",
+  "version": "0.0.2",
+  "description": "File",
+  "cordova": {
+    "id": "cordova-plugin-glifile",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "GetPictures",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-glifile" version="0.0.2">
+  <name>File</name>
+  <description>File</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,GetPictures</keywords>
+  <js-module src="www/glifile.js" name="GliFile">
+    <clobbers target="GliFile" />
+  </js-module>
+  <!--android平台-->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="GliFile">
+        <param name="android-package" value="org.apache.cordova.GliFile.GliFile" />
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </config-file>
+    <source-file src="src/android/GliFile.java" target-dir="src/org/apache/cordova/GliFile" />
+  </platform>
+  <!--ios平台-->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="GliFile">
+        <param name="ios-package" value="CDVGliFile" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/CDVGliFile.h" />
+    <source-file src="src/ios/CDVGliFile.m" />
+
+    <framework src="AssetsLibrary.framework" />
+    <framework src="MobileCoreServices.framework" />
+  </platform>
+</plugin>
